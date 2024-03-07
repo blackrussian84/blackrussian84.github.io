@@ -8,9 +8,9 @@ body {
 
 .container {
   max-width: 800px;
-  margin: 20px auto;
+  margin: 2% auto; /* Adjusted margin for better responsiveness */
   background-color: #fff;
-  padding: 20px;
+  padding: 2%; /* Adjusted padding for better responsiveness */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding-left: 1cm;
 }
