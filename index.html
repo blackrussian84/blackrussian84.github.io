@@ -1,118 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Liad Jenya Shvab - Resume</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta name="description" content="נשימת טומו - שיטה טיבטית עתיקה לנשימה והתמודדות עם קור. מסע עוצר נשימה מלא באתגרים פיזיים ומנטליים.">
+  <title>נשימת טומו - מסע הנשימה שלך</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <!-- Header section with background image -->
+  <header class="header">
+    <div class="overlay"></div>
+    <div class="header-content">
+      <h1>נשימת טומו</h1>
+      <p>מסע של נשימה, קור ועמידות</p>
+      <a href="#section1" class="cta-button">התחל את המסע שלך</a>
+    </div>
+  </header>
+
+  <!-- Main content -->
   <div class="container">
-    <header>
-      <h1><i class="fas fa-user"></i> Liad Jenya Shvab</h1>
-      <p><i class="far fa-envelope"></i> shwebsec@gmail.com | <i class="fas fa-phone"></i> +972-549-549-315</p>
-      <hr>
-      <h3>Summary </h3>
-      <p> Dedicated Worker with a Focus on Security Automation and Cost Efficiency </p>
-    </header>
-        <section class="skills">
-      <h2><i class="fas fa-code"></i> Skills</h2>
-      <ul>
-        <li>Version Control: Git,BitBucket. </li>
-        <li>CI: Jenkins, Azure-Devops, GitHub Actions, Circle-ci.</li>
-        <li>Cloud Platforms: AWS, Azure.</li>
-        <li>Containerization: Docker, Kubernetes, Helm, Argo-CD </li>
-        <li>Scripting: Powershell ,Python, Bash. </li>
-        <li>IAC:Terraform, Ansible, Puppet</li>
-        <li>OS: Linux, Windows, VMware </li>
+    
+    <section class="section" id="section1">
+      <h2 class="subtitle" onclick="toggleContent('content1')">הקדמה למסע נשימת טומו</h2>
+      <p id="content1" class="content hidden">טומו – טכניקה נשימתית עתיקה שנולדה בהרי טיבט – מזמינה אותנו למסע עוצר נשימה של שליטה עצמית, עמידות לקור והתאמות פיזיולוגיות מפתיעות.</p>
+    </section>
+
+    <section class="section">
+      <h2 class="subtitle" onclick="toggleContent('content2')">1. היפוקסיה – ההרפתקה מתחילה</h2>
+      <p id="content2" class="content hidden">לאחר סדרה מרתקת של נשימות עמוקות, השלב שבו נעצרת הנשימה מתחיל. כאן מתחיל הקסם. רמות החמצן בגוף מתחילות לרדת, והיפוקסיה נכנסת לתמונה.</p>
+    </section>
+
+    <section class="section">
+      <h2 class="subtitle" onclick="toggleContent('content3')">2. היפרקפניה – שקט לפני הסערה</h2>
+      <p id="content3" class="content hidden">במהלך עצירת הנשימה, הגוף ממשיך לייצר פחמן דו-חמצני (CO₂), ורמות הפחמן בדם מרקיעות שחקים.</p>
+    </section>
+
+    <section class="section">
+      <h2 class="subtitle" onclick="toggleContent('content4')">3. מאמץ התנגדותי – מאבק האיתנים של הנשימה</h2>
+      <p id="content4" class="content hidden">הנשימה בטומו כוללת שאיפות ונשיפות עוצמתיות שמפעילות את שרירי הנשימה, מחזקות את הסרעפת ומכינות אותנו לכל מאמץ.</p>
+    </section>
+
+    <section class="section benefits">
+      <h2 class="subtitle" onclick="toggleContent('content5')">יתרונות נשימת טומו</h2>
+      <ul id="content5" class="content hidden">
+        <li>שליטה בסטרס</li>
+        <li>שיפור קיבולת ריאות</li>
+        <li>ניצול חמצן מוגבר</li>
+        <li>עמידות עליונה</li>
       </ul>
     </section>
-    <section class="experience">
-      <h2>Job Experience</h2>
-      <h2><i class="fab fa-docker"></i> DevOps Engineer</h2>
-      <article>
-        <h3>StarGo</h3>
-        <p class="date">2023 – 2023</p>
-        <ul>
-         <li>ECS Orcestration Solution Support</li>
-         <li>Enhance security posture through cloud-managed services implementation.</li>
-         <il>Implementation of SSO solution For 3d party service</il>>
-         <li>Resizing Docker images</li>
-         <li>Get Hands on with AWS services: ECS, Lambda, SNS, SQS,  CloudWatch, Step Functions, SageMaker </li>
-        </ul>
-      </article>
-      <article>
-        <h3>3KeyTech</h3>
-        <p class="date">2022 - 2023</p>
-        <ul>
-          <li>Spearheaded microservices migration and application dockerization, optimizing container images with a layered and multi-stage approach, and creating Jenkins pipelines accordingly.</li>
-        </ul>
-      </article>
-      <article>
-        <h3>Wochit</h3>
-        <p class="date">2020 – 2022</p>
-        <ul>
-          <li>Enhance security posture through cloud-managed services implementation.</li>
-          <li>Address deployment issues and refactor CI/CD pipelines.</li>
-          <li>Achieved a 9% reduction in the overall AWS bill with a FinOps approach.</li>
-          <li>Constructed Helm Charts for new services.</li>
-        </ul>
-      </article>
+    
+    <section class="section">
+      <h2 class="subtitle" onclick="toggleContent('content6')">נשימת טומו - יותר משיטה</h2>
+      <p id="content6" class="content hidden">מסע הרפתקאות שמעצב אותנו מחדש, בונה עמידות פיזית, מנטלית ונשימתית. כל נשימה היא שלב נוסף בדרכנו להפוך ללוחמים עמידים מול הקור והחיים.</p>
     </section>
-    <section class="experience">
-      <h2><i class="fas fa-cogs"></i> Solution Engineer, ACE</h2>
-      <p class="date">2018 – 2020</p>
-      <ul>
-        <li>Gained expertise in virtualization solutions (Hyper-V, ESXi, Nutanix) and Azure cloud.</li>
-        <li>Led successful on-premises to cloud migrations.</li>
-        <li>Played a key role in client onboarding.</li>
-      </ul>
-    </section>
-    <section class="experience">
-      <h2><i class="fas fa-shield-alt"></i> Security Engineer, Cyberminds</h2>
-      <p class="date">2016 – 2018</p>
-      <ul>
-        <li>Conducted  vulnerability assessments across diverse domains.</li>
-        <li>Implemented effective mitigation solutions.</li>
-        <li>Engaged in OSINT.</li>
-      </ul>
-    </section>
-    <section class="experience">
-      <h2><i class="fas fa-vial"></i> Manual QA, Cisco</h2>
-      <p class="date">2014 – 2015</p>
-      <ul>
-        <li>Conducted CPE manual testing, frequently flying onsite to Europe for customer bug fixes.</li>
-      </ul>
-    </section>
-        <section class="experience">
-      <h2><i class="fas fa-network-wired"></i> Network Specialist, Micron</h2>
-      <p class="date">2012 – 2014</p>
-      <ul>
-        <li>Operated as a CCNP level network operator in Cisco campus network in FAB-18</li>
-      </ul>
-    </section>
-    <section class="experience">
-  <h2><i class="fas fa-headset"></i> Customer Technical Support, Orange</h2>
-  <p class="date">2010 – 2012</p>
-  <ul>
-    <li>Provided technical assistance to customers for ISP and VoIP services</li>
-  </ul>
-</section>
-        <section class="education">
-      <h2><i class="fas fa-graduation-cap"></i> Education</h2>
-      <article>
-        <h3>IITC Technology College | Cisco Network Academy</h3>
-        <p class="date">2009</p>
-        <ul>
-          <li>Received education in network technology at IITC Technology College.</li>
-          <li>Completed Cisco Network Academy program.</li>
-        </ul>
-      </article>
-    </section>
-    <footer>
-      <p>Language: Hebrew (Native) | English (Proficient) | Russian (Native)</p>
-    </footer>
+
   </div>
+
+  <footer class="footer">
+    <p>© 2024 - מסע נשימת טומו</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
