@@ -1,194 +1,33 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Entraînement Hypoxique de David</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(to bottom right, #e0f7fa, #80deea);
-      color: #333;
-      text-align: center;
-    }
-    header {
-      background: #00796b;
-      color: white;
-      padding: 20px 0;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    }
-    h1 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 2.5em;
-      margin: 0;
-    }
-    img {
-      width: 100%;
-      max-width: 600px;
-      height: auto;
-      border-radius: 10px;
-      margin: 20px 0;
-    }
-    table {
-      width: 90%;
-      max-width: 800px;
-      margin: 20px auto;
-      border-collapse: collapse;
-      background: rgba(255, 255, 255, 0.9);
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    }
-    th, td {
-      padding: 15px;
-      border: 1px solid #00796b;
-      text-align: center;
-      font-size: 1.1em;
-    }
-    th {
-      background-color: #00796b;
-      color: white;
-    }
-    td {
-      background-color: #ffffff;
-      transition: background-color 0.3s;
-    }
-    td:hover {
-      background-color: #e0f2f1;
-    }
-    button {
-      padding: 15px 30px;
-      font-size: 1.2em;
-      color: white;
-      background-color: #ff4500;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      margin: 20px 0;
-      transition: all 0.3s;
-    }
-    button:hover {
-      background-color: #ff6347;
-    }
-    .dynamics {
-      margin: 30px auto;
-      text-align: center;
-    }
-    .dynamics div {
-      display: inline-block;
-      padding: 15px;
-      background-color: #32cd32;
-      color: white;
-      margin: 10px;
-      font-size: 1.1em;
-      border-radius: 10px;
-      box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-      transition: transform 0.2s ease-in-out;
-    }
-    .dynamics div:hover {
-      transform: scale(1.1);
-    }
-    footer {
-      background: #00796b;
-      color: white;
-      padding: 10px 0;
-      position: relative;
-      bottom: 0;
-      width: 100%;
-    }
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2em;
-      }
-      table {
-        width: 100%;
-      }
-      button {
-        font-size: 1em;
-        padding: 10px 20px;
-      }
-      .dynamics div {
-        font-size: 1em;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Evening with Jenya</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="container">
+        <div class="overlay">
+            <h1>🌟 Hey Roni! 🌟</h1>
+            <p>Choose an activity for the evening with your favorite neighbor, Jenya!</p>
+            <div class="button-container">
+                <button class="activity-button" onclick="chooseActivity('Watch a movie', 'images/movie.png')">🔮🎥 Watch a Movie</button>
+                <button class="activity-button" onclick="chooseActivity('Play in the snow', 'images/line.png')">🔮❄️ Play in the Snow</button>
+                <button class="activity-button" onclick="chooseActivity('Explore the city', 'images/explore.png')">🔮🔍 Explore the City</button>
+                <button class="activity-button" onclick="chooseActivity('Spend time alone', 'images/alone.jpeg')">🔮👗 Spend Time Alone</button>
+            </div>
+            <p id="result" class="result"></p>
+        </div>
+    </div>
 
-<header>
-  <h1>Entraînement Hypoxique de David</h1>
-</header>
+    <!-- Modal Popup -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImage" class="modal-content">
+        <div id="caption" class="caption"></div>
+    </div>
 
-<img src="WhatsApp Image 2024-10-23 at 10.17.25.jpeg" alt="David en entraînement" />
-
-<p>Prêt pour un super entraînement sous-marin, David ? Voici ton plan de 45 minutes !</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Exercice</th>
-      <th>Instructions de performance</th>
-      <th>Objectif de l’exercice</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Contrôle de la respiration</td>
-      <td>Nager 2 x 50m en respirant tous les 3 coups de bras. Repos de 30 secondes entre chaque série.</td>
-      <td>Travailler la régularité de la respiration et la concentration.</td>
-    </tr>
-    <tr>
-      <td>Nage en apnée (retenue)</td>
-      <td>Nager 4 x 25m avec une respiration tous les 5 coups de bras. Repos de 20 secondes entre chaque longueur.</td>
-      <td>Développer la capacité pulmonaire et la résistance à l’apnée.</td>
-    </tr>
-    <tr>
-      <td>Battements sous l’eau</td>
-      <td>4 x 15m de battements de dauphin sous l’eau sans respirer. Repos de 30 secondes.</td>
-      <td>Améliorer la force des jambes et la capacité à retenir son souffle.</td>
-    </tr>
-    <tr>
-      <td>Respiration 3-5-7</td>
-      <td>Nager 3 x 50m avec un schéma de respiration alterné : 3 coups, puis 5, puis 7. Repos de 30 secondes.</td>
-      <td>Varier les rythmes respiratoires et augmenter la tolérance au CO2.</td>
-    </tr>
-    <tr>
-      <td>Pyramide hypoxique</td>
-      <td>Nager 1 x 25m sans respirer, puis 50m en respirant tous les 3 coups, puis 75m tous les 5 coups. Repos de 45 secondes.</td>
-      <td>Renforcer l'endurance en hypoxie avec une progression dans les distances.</td>
-    </tr>
-    <tr>
-      <td>Sprints hypoxiques</td>
-      <td>6 x 25m sprint sans respirer. Repos de 40 secondes.</td>
-      <td>Développer la vitesse et la résistance en hypoxie.</td>
-    </tr>
-    <tr>
-      <td>Nage longue hypoxique</td>
-      <td>Nager 2 x 100m en respirant tous les 5 coups. Repos de 1 minute.</td>
-      <td>Travailler la résistance en conditions d'effort prolongé.</td>
-    </tr>
-    <tr>
-      <td>Exercice 50-50</td>
-      <td>Nager 2 x 50m : 25m en retenant la respiration, puis 25m avec une respiration normale tous les 3 coups. Repos de 45 secondes.</td>
-      <td>Gérer la transition entre apnée et respiration contrôlée.</td>
-    </tr>
-  </tbody>
-</table>
-
-<div class="dynamics">
-  <div>David, tu vas y arriver comme un pro ! 🚀</div>
-  <div>On avance ensemble, c’est parti ! 🏊‍♂️</div>
-  <div>Rappelle-toi, la respiration est ta clé ! 🧘‍♂️</div>
-</div>
-
-<button onclick="alert('Super travail, David ! Continue comme ça !')">Fin de l’entraînement</button>
-
-<footer>
-  <p>&copy; 2024 Entraînement Hypoxique de David. Tous droits réservés.</p>
-</footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
